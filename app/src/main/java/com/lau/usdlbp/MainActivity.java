@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Enter only 1 Amount", Toast.LENGTH_LONG).show();
                 } else if (lbpAmount.length() > 0 && usdAmount.length() == 0) {
                     try {
-                        double lbpAm = Integer.parseInt(lbpAmount);
+                        double lbpAm = Double.parseDouble(lbpAmount);
                         double toUsd = lbpAm / 22000;
                     } catch (NumberFormatException e) {
                         Toast.makeText(getApplicationContext(), "Enter only numbers", Toast.LENGTH_LONG).show();
                     }
                 } else {
                     try {
-                        double usdAm = Integer.parseInt(usdAmount);
+                        double usdAm = Double.parseDouble(usdAmount);
                         double toLbp = usdAm * 22000;
                     } catch (NumberFormatException e) {
                         Toast.makeText(getApplicationContext(), "Enter only numbers", Toast.LENGTH_LONG).show();
